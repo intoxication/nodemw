@@ -4,14 +4,14 @@ let vows = require( 'vows' ),
 	assert = require( 'assert' ),
 	Bot = require( '../lib/bot' ),
 	client = new Bot( {
-		server: 'en.wikipedia.org',
-		path: '/w'
+		server: 'en.adruglist.com',
+		path: '/'
 	} );
 
 vows.describe( 'URL fetching' ).addBatch( {
 	'client.fetchUrl()': {
 		topic: function () {
-			client.fetchUrl( 'http://example.com', this.callback );
+			client.fetchUrl( 'http://en.adruglist.com', this.callback );
 		},
 		'should pass page content to a callback': function ( e, res ) {
 			assert.isString( res );
