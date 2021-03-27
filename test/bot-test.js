@@ -8,15 +8,15 @@ vows.describe( 'bot class' ).addBatch( {
 	'supports config object': {
 		topic: function () {
 			return new Bot( {
-				server: 'pl.wikipedia.org',
-				path: '/w'
+				server: 'en.adruglist.com',
+				path: '/'
 			} );
 		},
 		'server is properly passed': function ( client ) {
-			assert.equal( client.api.server, 'pl.wikipedia.org' );
+			assert.equal( client.api.server, 'en.adruglist.com' );
 		},
 		'path is properly passed': function ( client ) {
-			assert.equal( client.api.path, '/w' );
+			assert.equal( client.api.path, '/' );
 		}
 	},
 	'supports config file': {
@@ -24,10 +24,10 @@ vows.describe( 'bot class' ).addBatch( {
 			return new Bot( __dirname + '/config.json' );
 		},
 		'server is properly passed': function ( client ) {
-			assert.equal( client.api.server, 'pl.wikipedia.org' );
+			assert.equal( client.api.server, 'en.adruglist.com' );
 		},
 		'path is properly passed': function ( client ) {
-			assert.equal( client.api.path, '/w' );
+			assert.equal( client.api.path, '/' );
 		}
 	},
 	'getConfig()': {
@@ -69,8 +69,8 @@ vows.describe( 'bot class' ).addBatch( {
 	'dry run mode': {
 		topic: function () {
 			let client = new Bot( {
-				server: 'pl.wikipedia.org',
-				path: '/w',
+				server: 'en.adruglist.com',
+				path: '/',
 				dryRun: true
 			} );
 
