@@ -4,8 +4,8 @@ let vows = require( 'vows' ),
 	assert = require( 'assert' ),
 	Bot = require( '..' ),
 	client = new Bot( {
-		server: 'en.wikipedia.org',
-		path: '/w'
+		server: 'en.adruglist.com',
+		path: '/'
 	} ),
 	ARTICLE = 'Albert Einstein';
 
