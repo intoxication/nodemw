@@ -1,6 +1,6 @@
 {
-	"server": "pl.wikipedia.org",
-	"path": "/w",
+	"server": "en.adruglist.com",
+	"path": "/",
 	"goo": 123,
 	"silent": true
 }
